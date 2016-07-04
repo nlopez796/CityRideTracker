@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/bg">
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:orientation="horizontal"
+        >
+
+    </LinearLayout>
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/current_ride"
+        android:src="@drawable/current_ride"
+        android:background="@null"
+        android:theme="@style/Widget.AppCompat.ImageButton"
+        android:layout_below="@+id/layout_title"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="35dp"/>
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/ride_history"
+        android:src="@drawable/ride_history"
+        android:background="@null"
+        android:layout_alignParentBottom="true"
+        android:layout_alignLeft="@+id/record_ride"
+        android:layout_alignStart="@+id/record_ride"
+        android:layout_marginBottom="85dp"/>
+
+    <TextView
+        android:id="@+id/layout_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="Home Screen"
+        android:textSize="50sp"
+        android:textColor="#1c2ef4"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"/>
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/record_ride"
+        android:src="@drawable/record_ride"
+        android:background="@null"
+        android:layout_centerVertical="true"
+        android:layout_alignLeft="@+id/current_ride"
+        android:layout_alignStart="@+id/current_ride"/>
+
+
+</RelativeLayout>

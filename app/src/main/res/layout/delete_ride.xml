@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              tools:context=".EditRideActivity"
+              android:weightSum="1"
+              android:background="#e7fdfe">
+
+    <TextView
+        android:id="@+id/layout_title_1"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:layout_gravity="center_horizontal"
+        android:text="Delete Rides"
+        android:textSize="30sp"
+        android:textColor="#3b20f0"
+        android:gravity="center_horizontal"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_above="@+id/textView2"/>
+
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:id="@+id/spinnerLocations"
+        android:hint="@string/ride_type"
+        android:ems="10"
+        android:spinnerMode="dialog"
+        android:layout_alignParentTop="true"
+        android:layout_alignLeft="@+id/btn_cancel"
+        android:layout_alignStart="@+id/btn_cancel"/>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="513dp">
+
+        <TextView
+            android:id="@+id/symbol"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textSize="22sp"
+            android:layout_above="@+id/time"
+            android:layout_alignTop="@+id/date"
+            android:layout_alignLeft="@+id/date"
+            android:layout_alignStart="@+id/date"/>
+
+        <ImageButton
+            android:id="@+id/btn_cancel"
+            android:layout_width="109dp"
+            android:layout_height="wrap_content"
+            android:onClick="onClickCancel"
+            android:src="@drawable/cancel_button"
+            android:background="@color/white"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"/>
+
+        <EditText
+            android:id="@+id/spinnerRide"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="text"
+            android:textSize="16sp"
+            android:layout_gravity="center_horizontal"
+            android:layout_below="@+id/time"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:textAlignment="textEnd"
+            android:layout_marginLeft="150dp"
+            android:layout_marginTop="20dp"/>
+
+        <EditText
+            android:id="@+id/time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="time"
+            android:textSize="16sp"
+            android:layout_gravity="right"
+            android:textAlignment="textEnd"
+            android:layout_marginBottom="15dp"
+            android:layout_alignRight="@+id/date"
+            android:layout_alignEnd="@+id/date"
+            android:layout_below="@+id/date"
+            android:layout_alignLeft="@+id/date"
+            android:layout_alignStart="@+id/date"
+            android:layout_marginTop="45dp"/>
+
+        <EditText
+            android:id="@+id/date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="date"
+            android:textSize="16sp"
+            android:layout_gravity="center_horizontal"
+            android:layout_below="@+id/amount"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="40dp"
+            android:layout_marginLeft="150dp"/>
+
+        <EditText
+            android:layout_width="330dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:id="@+id/amount"
+            android:inputType="numberDecimal"
+            android:textAlignment="textEnd"
+            android:layout_below="@+id/location"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="150dp"/>
+
+        <AutoCompleteTextView
+
+            android:id="@+id/location"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:imeOptions="actionDone"
+            android:ems="10"
+            android:layout_below="@+id/spinnerLocations"
+            android:layout_alignRight="@+id/spinnerLocations"
+            android:layout_alignEnd="@+id/spinnerLocations"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="5dp"/>
+
+    </RelativeLayout>
+</LinearLayout>

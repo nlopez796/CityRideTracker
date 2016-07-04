@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NewRideActivity"
+    android:background="#e7fdfe">
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:orientation="horizontal" >
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/layout_title_1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_horizontal"
+        android:text="@string/record_ride"
+        android:textSize="30sp"
+        android:textColor="#3b20f0"
+        android:gravity="center_horizontal"
+        android:layout_below="@+id/linearLayout1"
+        android:layout_centerHorizontal="true" />
+
+    <AutoCompleteTextView
+
+        android:id="@+id/location"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="14"
+        android:layout_marginTop="52dp"
+        android:imeOptions="actionDone"
+        android:text="Please enter your location.."
+        android:layout_marginLeft="25dp"/>
+
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/spinner"
+        android:hint="Please select Ride Type: "
+        android:ems="14"
+        android:spinnerMode="dialog"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="150dp"
+        android:layout_marginTop="30dp"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:ems="14"
+        android:hint="@string/enter_amount_paid"
+        android:id="@+id/amount"
+        android:textAlignment="center"
+        tools:targetApi="jelly_bean_mr1"
+        android:imeOptions="actionDone"
+        android:layout_above="@+id/spinner"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignLeft="@+id/time"
+        android:layout_alignStart="@+id/time"/>
+
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:inputType="time"
+        android:id="@+id/time"
+        android:hint="Enter Time.."
+        android:ems="14"
+        android:layout_weight=".50"
+        android:imeOptions="actionDone"
+        android:maxLength="8"
+        android:layout_alignTop="@+id/date"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_toEndOf="@+id/confirm"
+        android:layout_marginLeft="140dp"/>
+
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:inputType="date"
+        android:id="@+id/date"
+        android:hint="Enter Date.."
+        android:ems="14"
+        android:maxLength="10"
+        android:layout_weight=".50"
+        android:imeOptions="actionDone"
+        android:layout_above="@+id/confirm"
+        android:layout_toRightOf="@+id/linearLayout1"
+        android:layout_marginBottom="55dp"
+        android:layout_toStartOf="@+id/cancel"
+        android:layout_marginLeft="15dp"
+        android:layout_toLeftOf="@+id/cancel"/>
+
+    <ImageButton
+        android:id="@+id/confirm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="saveRide"
+        android:src="@drawable/confirm"
+        android:background="@color/white"
+        android:layout_alignParentBottom="true"
+        android:layout_alignLeft="@+id/location"
+        android:layout_alignStart="@+id/location"/>
+
+    <ImageButton
+        android:id="@+id/cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="cancelRide"
+        android:src="@drawable/cancel"
+        android:background="@color/white"
+        android:layout_alignParentBottom="true"
+        android:layout_toLeftOf="@+id/amount"
+        android:layout_toStartOf="@+id/amount"
+        android:layout_marginRight="41dp"
+        android:layout_marginEnd="41dp"/>
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/symbol"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textSize="22sp"
+        android:layout_marginRight="150dp"
+        android:layout_alignBottom="@+id/amount"
+        android:layout_alignTop="@+id/amount"
+        android:layout_marginLeft="150dp"/>
+
+    <ImageView
+        android:id="@+id/poweredBy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/powered_by_google_light"
+        android:layout_below="@+id/location"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"/>
+
+    <ImageButton
+        android:id="@+id/btnSpeak"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/speak"
+        android:src="@android:drawable/ic_btn_speak_now"
+        android:layout_alignBottom="@+id/amount"
+        android:layout_alignTop="@+id/amount"
+        android:layout_toStartOf="@+id/time"
+        android:layout_marginLeft="30dp"
+        android:layout_alignRight="@+id/date"
+        android:layout_alignEnd="@+id/date"/>
+
+</RelativeLayout>
